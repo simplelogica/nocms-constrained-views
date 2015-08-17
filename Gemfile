@@ -13,4 +13,11 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+group :test do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'capybara'
+end
+
 gem 'acts_as_constrained', git: 'git@github.com:simplelogica/acts_as_constrained.git', branch: 'master'
