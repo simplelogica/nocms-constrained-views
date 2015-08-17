@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    constrained_views (0.0.1)
-      rails (~> 4.2.3)
+    nocms-constrained-views (0.0.1)
+      rails (> 4.0, < 4.3)
 
 GEM
   remote: https://rubygems.org/
@@ -102,7 +102,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  constrained_views!
+  nocms-constrained-views!
   sqlite3
 
 BUNDLED WITH

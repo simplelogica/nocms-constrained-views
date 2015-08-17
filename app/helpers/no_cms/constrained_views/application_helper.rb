@@ -1,4 +1,4 @@
-module ConstrainedViews
+module NoCms::ConstrainedViews
   module ApplicationHelper
   end
 end

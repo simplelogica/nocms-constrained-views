@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount ConstrainedViews::Engine => "/constrained_views"
+  mount NoCms::ConstrainedViews::Engine => "/constrained_views"
 end

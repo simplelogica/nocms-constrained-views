@@ -1,2 +1,2 @@
-ConstrainedViews::Engine.routes.draw do
+NoCms::ConstrainedViews::Engine.routes.draw do
 end
