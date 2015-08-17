@@ -1,7 +1,16 @@
+GIT
+  remote: git@github.com:simplelogica/acts_as_constrained.git
+  revision: d10dfae180a587b3153d8bfe60eaae814be118d5
+  branch: master
+  specs:
+    acts_as_constrained (0.0.1)
+      rails (~> 4.0, < 4.3)
+
 PATH
   remote: .
   specs:
     nocms-constrained-views (0.0.1)
+      acts_as_constrained (~> 0.0.1)
       rails (> 4.0, < 4.3)
 
 GEM
@@ -102,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_constrained!
   nocms-constrained-views!
   sqlite3
 

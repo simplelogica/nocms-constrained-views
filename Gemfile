@@ -13,3 +13,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'acts_as_constrained', git: 'git@github.com:simplelogica/acts_as_constrained.git', branch: 'master'
