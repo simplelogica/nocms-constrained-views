@@ -20,4 +20,4 @@ group :test do
   gem 'capybara'
 end
 
-gem 'acts_as_constrained', git: 'git@github.com:simplelogica/acts_as_constrained.git', branch: 'master'
+gem 'acts-as-constrained', git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'master'

@@ -1,16 +1,16 @@
 GIT
-  remote: git@github.com:simplelogica/acts_as_constrained.git
-  revision: d10dfae180a587b3153d8bfe60eaae814be118d5
+  remote: git@github.com:simplelogica/acts-as-constrained.git
+  revision: 43234347108d8f3e371a305f3879658b6d615267
   branch: master
   specs:
-    acts_as_constrained (0.0.1)
+    acts-as-constrained (0.0.1)
       rails (~> 4.0, < 4.3)
 
 PATH
   remote: .
   specs:
     nocms-constrained-views (0.0.1)
-      acts_as_constrained (~> 0.0.1)
+      acts-as-constrained (~> 0.0.1)
       rails (> 4.0, < 4.3)
 
 GEM
@@ -63,13 +63,13 @@ GEM
     erubis (2.7.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
-    faker (1.4.3)
+    faker (1.5.0)
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     json (1.8.3)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -141,7 +141,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_constrained!
+  acts-as-constrained!
   capybara
   factory_girl
   faker
