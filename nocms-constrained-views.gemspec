@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", " > 4.0", "< 4.3"
-  s.add_dependency "acts_as_constrained", "~> 0.0.1"
+  s.add_dependency "acts-as-constrained", "~> 0.0.1"
 
   s.add_development_dependency "sqlite3"
 end
