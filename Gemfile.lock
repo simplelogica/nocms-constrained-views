@@ -11,7 +11,7 @@ PATH
   specs:
     nocms-constrained-views (0.0.1)
       acts-as-constrained (~> 0.0.1)
-      nocms-blocks (~> 1.0.0)
+      nocms-blocks (~> 1.1.0)
       rails (> 4.0, < 4.3)
 
 GEM
@@ -70,6 +70,9 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    globalize (5.0.1)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
@@ -79,8 +82,9 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.8.0)
-    nocms-blocks (1.0.0)
-      awesome_nested_set (>= 3.0.0.rc.6)
+    nocms-blocks (1.1.0)
+      awesome_nested_set (~> 3.0.0)
+      globalize (>= 4.0.0, < 5.1)
       rails (~> 4.0, <= 4.2.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
