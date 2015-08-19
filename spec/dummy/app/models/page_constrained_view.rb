@@ -1,4 +1,7 @@
 class PageConstrainedView < NoCms::ConstrainedViews::Base
+
+  has_many :blocks, class_name: "NoCms::Blocks::Block"
+
   belongs_to :page
 
   constrained_by :single_date
