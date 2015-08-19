@@ -1,6 +1,6 @@
 class PageConstrainedView < NoCms::ConstrainedViews::Base
 
-  has_many :blocks, class_name: "NoCms::Blocks::Block"
+  has_and_belongs_to_many :blocks, class_name: "NoCms::Blocks::Block", association_foreign_key: 'no_cms_blocks_block_id'
 
   belongs_to :page
 
