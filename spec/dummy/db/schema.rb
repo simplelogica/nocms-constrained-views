@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817142514) do
+ActiveRecord::Schema.define(version: 20150819154922) do
 
   create_table "acts_as_constrained_date_constraints", force: :cascade do |t|
     t.date    "starts_at"
@@ -31,6 +31,35 @@ ActiveRecord::Schema.define(version: 20150817142514) do
 
   add_index "acts_as_constrained_model_constraints", ["constrained_type", "constrained_id"], name: "index_model_constraints_on_constrained"
   add_index "acts_as_constrained_model_constraints", ["constraining_type", "constraining_id"], name: "index_model_constraints_on_constraining"
+
+  create_table "no_cms_blocks_block_translations", force: :cascade do |t|
+    t.integer "no_cms_blocks_block_id"
+    t.string  "locale"
+    t.text    "fields_info",            limit: 4294967295
+    t.boolean "draft"
+  end
+
+  add_index "no_cms_blocks_block_translations", ["no_cms_blocks_block_id"], name: "no_cms_blocks_blocks_translations_block_id"
+
+  create_table "no_cms_blocks_blocks", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.integer  "position"
+    t.text     "fields_info"
+    t.string   "layout"
+  end
+
+  create_table "no_cms_blocks_blocks_page_constrained_views", id: false, force: :cascade do |t|
+    t.integer "page_constrained_view_id", null: false
+    t.integer "no_cms_blocks_block_id",   null: false
+  end
+
+  add_index "no_cms_blocks_blocks_page_constrained_views", ["no_cms_blocks_block_id", "page_constrained_view_id"], name: "index_blocks_page_constrained_views_on_block_id_and_view_id", unique: true
+  add_index "no_cms_blocks_blocks_page_constrained_views", ["page_constrained_view_id", "no_cms_blocks_block_id"], name: "index_blocks_page_constrained_views_on_view_id_and_block_id", unique: true
 
   create_table "page_constrained_views", force: :cascade do |t|
     t.integer  "page_id"

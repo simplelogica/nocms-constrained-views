@@ -1,4 +1,5 @@
 require 'acts-as-constrained'
+require 'nocms-blocks'
 
 module NoCms::ConstrainedViews
   class Engine < ::Rails::Engine
