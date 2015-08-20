@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.license     = "GPL"
 
   s.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
-  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", " > 4.0", "< 4.3"
   s.add_dependency "acts-as-constrained", "~> 0.0.1"
