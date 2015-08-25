@@ -14,7 +14,10 @@ module NoCms::ConstrainedViews
         has_and_belongs_to_many :blocks,
           class_name: "NoCms::Blocks::Block",
           association_foreign_key: 'no_cms_blocks_block_id'
+
+        accepts_nested_attributes_for :blocks, allow_destroy: true
       end
+
     end
 
   end
