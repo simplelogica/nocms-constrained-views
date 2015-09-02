@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819154922) do
+ActiveRecord::Schema.define(version: 20150831091509) do
 
   create_table "acts_as_constrained_date_constraints", force: :cascade do |t|
     t.date    "starts_at"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20150819154922) do
 
   add_index "acts_as_constrained_model_constraints", ["constrained_type", "constrained_id"], name: "index_model_constraints_on_constrained"
   add_index "acts_as_constrained_model_constraints", ["constraining_type", "constraining_id"], name: "index_model_constraints_on_constraining"
+
+  create_table "no_cms_blocks_block_slots", force: :cascade do |t|
+    t.integer  "container_id"
+    t.string   "container_type"
+    t.integer  "block_id"
+    t.integer  "position",       default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+  end
+
+  add_index "no_cms_blocks_block_slots", ["block_id"], name: "index_no_cms_blocks_block_slots_on_block_id"
+  add_index "no_cms_blocks_block_slots", ["container_type", "container_id"], name: "index_no_cms_blocks_block_slots_on_container_type_and_id"
+  add_index "no_cms_blocks_block_slots", ["parent_id"], name: "index_no_cms_blocks_block_slots_on_parent_id"
 
   create_table "no_cms_blocks_block_translations", force: :cascade do |t|
     t.integer "no_cms_blocks_block_id"

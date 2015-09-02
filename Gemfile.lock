@@ -6,6 +6,16 @@ GIT
     acts-as-constrained (0.0.1)
       rails (~> 4.0, < 4.3)
 
+GIT
+  remote: git@github.com:simplelogica/nocms-blocks.git
+  revision: a9786b64ecf1a375f07cae1d62020ba8b21b91d8
+  branch: features/block-slots
+  specs:
+    nocms-blocks (1.1.1)
+      awesome_nested_set (~> 3.0.0)
+      globalize (>= 4.0.0, < 5.1)
+      rails (~> 4.0, <= 4.2.3)
+
 PATH
   remote: .
   specs:
@@ -82,10 +92,6 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.8.0)
-    nocms-blocks (1.1.0)
-      awesome_nested_set (~> 3.0.0)
-      globalize (>= 4.0.0, < 5.1)
-      rails (~> 4.0, <= 4.2.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     rack (1.6.4)
@@ -155,6 +161,7 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
+  nocms-blocks!
   nocms-constrained-views!
   rspec-rails
   sqlite3
