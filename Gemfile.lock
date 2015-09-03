@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: e94a2f2c0bfc092d1f651cd8d372ed74829b3ec7
-  branch: master
+  revision: 8727bc7ee6b16cd0b898cf9cf144ecc79b36322d
+  branch: features/skeletons
   specs:
     nocms-blocks (1.1.1)
       awesome_nested_set (~> 3.0.0)
