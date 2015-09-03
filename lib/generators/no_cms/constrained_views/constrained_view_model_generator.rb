@@ -6,6 +6,8 @@ class NoCms::ConstrainedViews::ConstrainedViewModelGenerator < Rails::Generators
     # Then we create the no_cms_blocks migrations
     rake "no_cms_blocks:install:migrations"
 
+    generate "nocms:blocks:skeleton_migration", "#{class_name}ConstrainedView"
+
     # And then we inherit from our base model
     gsub_file "app/models/#{class_name.underscore}_constrained_view.rb", /ActiveRecord::Base/, 'NoCms::ConstrainedViews::Base'
 

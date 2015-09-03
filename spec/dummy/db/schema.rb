@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831091509) do
+ActiveRecord::Schema.define(version: 20150903162747) do
 
   create_table "acts_as_constrained_date_constraints", force: :cascade do |t|
     t.date    "starts_at"
@@ -70,20 +70,13 @@ ActiveRecord::Schema.define(version: 20150831091509) do
     t.string   "layout"
   end
 
-  create_table "no_cms_blocks_blocks_page_constrained_views", id: false, force: :cascade do |t|
-    t.integer "page_constrained_view_id", null: false
-    t.integer "no_cms_blocks_block_id",   null: false
-  end
-
-  add_index "no_cms_blocks_blocks_page_constrained_views", ["no_cms_blocks_block_id", "page_constrained_view_id"], name: "index_blocks_page_constrained_views_on_block_id_and_view_id", unique: true
-  add_index "no_cms_blocks_blocks_page_constrained_views", ["page_constrained_view_id", "no_cms_blocks_block_id"], name: "index_blocks_page_constrained_views_on_view_id_and_block_id", unique: true
-
   create_table "page_constrained_views", force: :cascade do |t|
     t.integer  "page_id"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.date     "single_date_constraint_starts_at"
     t.date     "single_date_constraint_ends_at"
+    t.string   "skeleton"
   end
 
   add_index "page_constrained_views", ["page_id"], name: "index_page_constrained_views_on_page_id"
