@@ -12,7 +12,7 @@ module NoCms::ConstrainedViews
 
       klass.class_eval do
         include NoCms::Blocks::Concerns::ModelWithSlots
-        include NoCms::Blocks::Concerns::ModelWithSkeleton
+        include NoCms::Blocks::Concerns::ModelWithTemplate
       end
 
     end
