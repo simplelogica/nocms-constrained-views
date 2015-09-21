@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:simplelogica/acts-as-constrained.git
-  revision: 43234347108d8f3e371a305f3879658b6d615267
+  revision: fa6da8d0d4e2e82336c7de8455283053a0fc80b5
   branch: master
   specs:
     acts-as-constrained (0.0.1)
@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: 151f13228d79f65535358c31df90dcb9dfbb405b
-  branch: features/skeletons
+  revision: 89deeb16db02af89e345a522ce50f6886620cf0a
+  branch: edge
   specs:
     nocms-blocks (1.1.1)
       awesome_nested_set (~> 3.0.0)

@@ -13,6 +13,16 @@ module NoCms::ConstrainedViews
       klass.class_eval do
         include NoCms::Blocks::Concerns::ModelWithSlots
         include NoCms::Blocks::Concerns::ModelWithTemplate
+
+        def dup_with_slots
+          duplicated = dup_without_slots
+          block_slots.each do |slot|
+            duplicated.block_slots << slot.dup
+          end
+          duplicated
+        end
+        alias_method_chain :dup, :slots
+
       end
 
     end
