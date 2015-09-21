@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :page_constrained_view do
+    skeleton 'default'
   end
 end

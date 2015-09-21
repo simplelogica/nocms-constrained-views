@@ -8,13 +8,13 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: a9786b64ecf1a375f07cae1d62020ba8b21b91d8
-  branch: features/block-slots
+  revision: 151f13228d79f65535358c31df90dcb9dfbb405b
+  branch: features/skeletons
   specs:
     nocms-blocks (1.1.1)
       awesome_nested_set (~> 3.0.0)
       globalize (>= 4.0.0, < 5.1)
-      rails (~> 4.0, <= 4.2.3)
+      rails (~> 4.0, <= 4.2.4)
 
 PATH
   remote: .
