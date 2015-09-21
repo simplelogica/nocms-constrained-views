@@ -14,10 +14,12 @@ module NoCms::ConstrainedViews
         include NoCms::Blocks::Concerns::ModelWithSlots
         include NoCms::Blocks::Concerns::ModelWithTemplate
 
-        def dup_with_slots
+        def dup_with_slots options = {}
+          options.reverse_merge!({ dup_blocks: true })
+
           duplicated = dup_without_slots
           block_slots.each do |slot|
-            duplicated.block_slots << slot.dup
+            duplicated.block_slots << slot.dup(dup_block: options[:dup_blocks])
           end
           duplicated
         end
