@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903162747) do
+ActiveRecord::Schema.define(version: 20150921104516) do
 
   create_table "acts_as_constrained_date_constraints", force: :cascade do |t|
     t.date    "starts_at"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150903162747) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.string   "template_zone"
   end
 
   add_index "no_cms_blocks_block_slots", ["block_id"], name: "index_no_cms_blocks_block_slots_on_block_id"
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150903162747) do
     t.integer  "position"
     t.text     "fields_info"
     t.string   "layout"
+    t.string   "template_zone"
   end
 
   create_table "page_constrained_views", force: :cascade do |t|
@@ -76,7 +78,7 @@ ActiveRecord::Schema.define(version: 20150903162747) do
     t.datetime "updated_at",                       null: false
     t.date     "single_date_constraint_starts_at"
     t.date     "single_date_constraint_ends_at"
-    t.string   "skeleton"
+    t.string   "template"
   end
 
   add_index "page_constrained_views", ["page_id"], name: "index_page_constrained_views_on_page_id"
