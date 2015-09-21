@@ -2,9 +2,6 @@ require 'rails_helper'
 
 describe Page, type: :model do
 
-  it_behaves_like "model with has and belongs to many relationship",
-    :page_constrained_view, :block, :blocks, nil
-
   let(:page) { create :page }
 
   context "when asigning constrained views" do
