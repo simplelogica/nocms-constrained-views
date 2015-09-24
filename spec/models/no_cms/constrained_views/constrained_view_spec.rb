@@ -12,7 +12,10 @@ describe NoCms::ConstrainedViews::Page, type: :model do
     let(:block_slots) { create_list :block_slot, 4  }
     let!(:original) { create :page_constrained_view, block_slots: block_slots }
 
-    subject { original.dup }
+    subject do
+      original.dup_block_when_duping_slots = true
+      original.dup
+    end
 
     it "should copy the basic attributes" do
       expect(subject).to_not eq original
@@ -38,7 +41,7 @@ describe NoCms::ConstrainedViews::Page, type: :model do
     let(:block_slots) { create_list :block_slot, 4  }
     let!(:original) { create :page_constrained_view, block_slots: block_slots }
 
-    subject { original.dup(dup_blocks: false) }
+    subject { original.dup }
 
     it "should copy the basic attributes" do
       expect(subject).to_not eq original
