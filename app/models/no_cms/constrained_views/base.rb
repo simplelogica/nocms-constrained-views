@@ -2,7 +2,6 @@ module NoCms::ConstrainedViews
   class Base < ActiveRecord::Base
     self.abstract_class = true
 
-    include ActsAsConstrained::Concerns::Constrained
 
     ##
     # We include the has_and_belongs_to_many relationship only when this class is extended.
@@ -11,6 +10,7 @@ module NoCms::ConstrainedViews
       super
 
       klass.class_eval do
+        include ActsAsConstrained::Concerns::Constrained
         include NoCms::Blocks::Concerns::ModelWithSlots
         include NoCms::Blocks::Concerns::ModelWithTemplate
       end
