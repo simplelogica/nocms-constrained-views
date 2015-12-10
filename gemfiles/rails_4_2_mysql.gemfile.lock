@@ -18,7 +18,7 @@ GIT
       rails (~> 4.0, <= 4.2.4)
 
 PATH
-  remote: .
+  remote: ../
   specs:
     nocms-constrained-views (0.0.1)
       acts-as-constrained (~> 0.0.1)
@@ -102,6 +102,7 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
+    mysql2 (0.3.20)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     rack (1.6.4)
@@ -174,8 +175,10 @@ DEPENDENCIES
   capybara
   factory_girl
   faker
+  mysql2 (~> 0.3.0)
   nocms-blocks!
   nocms-constrained-views!
+  rails (= 4.2.4)
   rspec-rails
 
 BUNDLED WITH
