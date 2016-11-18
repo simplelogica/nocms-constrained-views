@@ -21,9 +21,10 @@ PATH
   remote: ../
   specs:
     nocms-constrained-views (0.0.1)
-      acts-as-constrained (~> 0.0.1)
-      nocms-blocks (~> 1.1.0)
-      rails (> 4.0, < 4.3)
+      activeresource (>= 4.0.0, < 5.1)
+      acts-as-constrained (>= 0.0.1, < 0.1)
+      nocms-blocks (>= 1.1.0, < 1.1.5)
+      rails (> 4.0, < 5.1)
 
 GEM
   remote: https://rubygems.org/
@@ -92,6 +93,7 @@ GEM
     mysql2 (0.3.20)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.19.0)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -156,6 +158,7 @@ DEPENDENCIES
   mysql2 (~> 0.3.0)
   nocms-blocks!
   nocms-constrained-views!
+  pg
   rails (= 4.1.13)
   rspec-rails
 
