@@ -27,7 +27,7 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: 54cc6a819752d4fc31247e71a4a78545a48299fe
+  revision: 5d660271c057f8c574feafbbb9b83475a14cd7d9
   branch: features/rails-5
   specs:
     nocms-blocks (1.1.4)

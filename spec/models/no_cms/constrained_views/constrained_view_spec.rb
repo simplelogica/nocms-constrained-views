@@ -9,8 +9,8 @@ describe NoCms::ConstrainedViews::Page, type: :model do
 
   context "when duplicating a view duplicating its blocks" do
 
-    let(:block_slots) { create_list :block_slot, 4  }
-    let!(:original) { create :page_constrained_view, block_slots: block_slots }
+    let!(:block_slots) { create_list :block_slot, 4, container: original }
+    let(:original) { create :page_constrained_view }
 
     subject do
       original.dup_block_when_duping_slots = true
@@ -38,22 +38,16 @@ describe NoCms::ConstrainedViews::Page, type: :model do
 
   context "when duplicating a view reusing the same blocks" do
 
-    let(:block_slots) { create_list :block_slot, 4  }
-    let!(:original) { create :page_constrained_view, block_slots: block_slots }
+    let!(:block_slots) { create_list :block_slot, 4, container: original  }
+    let(:original) { create :page_constrained_view }
 
     subject { original.dup }
-
-    it "should copy the basic attributes" do
-      expect(subject).to_not eq original
-      expect(subject.template).to eq original.template
-      expect(subject.template).to_not be_blank
-    end
 
     it "should reuse the exact same slots" do
 
       expect(subject.block_slots.length).to eq original.block_slots.length
 
-      block_slots.zip(subject.block_slots).each do |slot, dupped_slot|
+      block_slots.sort_by(&:lft).zip(subject.block_slots.sort_by(&:lft)).each do |slot, dupped_slot|
         expect(slot.block).to eq dupped_slot.block
       end
     end
