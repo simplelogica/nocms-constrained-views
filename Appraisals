@@ -18,7 +18,8 @@ appraise "rails-5-0-mysql" do
   gem "rails", "5.0.0"
   gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'features/rails-5'
   gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5'
-  gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
+  #gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
+  gem "globalize", github: 'globalize/globalize'
   gem "activesupport", "~> 5.0.0"
   gem 'activeresource', github: 'rails/activeresource'
 end
@@ -43,7 +44,8 @@ appraise "rails-5-0-pgsql" do
   gem "rails", "5.0.0"
   gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'features/rails-5'
   gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5'
-  gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
+  #gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
+  gem "globalize", github: 'globalize/globalize'
   gem "activesupport", "~> 5.0.0"
   gem 'activeresource', github: 'rails/activeresource'
 end
