@@ -21,9 +21,10 @@ PATH
   remote: ../
   specs:
     nocms-constrained-views (0.0.1)
-      acts-as-constrained (~> 0.0.1)
-      nocms-blocks (~> 1.1.0)
-      rails (> 4.0, < 4.3)
+      activeresource (>= 4.0.0, < 5.1)
+      acts-as-constrained (>= 0.0.1, < 0.1)
+      nocms-blocks (>= 1.1.0, < 1.1.5)
+      rails (> 4.0, < 5.1)
 
 GEM
   remote: https://rubygems.org/

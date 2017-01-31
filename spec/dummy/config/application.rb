@@ -20,7 +20,7 @@ module Dummy
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true if Rails.version > "4.2"
+    config.active_record.raise_in_transactional_callbacks = true if Rails.version > "4.2" && Rails.version < "5"
   end
 end
 
