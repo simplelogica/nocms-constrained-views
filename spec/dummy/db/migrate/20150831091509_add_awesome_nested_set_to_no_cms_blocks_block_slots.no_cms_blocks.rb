@@ -1,5 +1,13 @@
+active_record_migration_class =
+  if Rails::VERSION::STRING[0..2].to_f >= 5
+    ActiveRecord::Migration[Rails::VERSION::STRING[0..2].to_f]
+  else
+    ActiveRecord::Migration
+  end
+
+
 # This migration comes from no_cms_blocks (originally 20150828120611)
-class AddAwesomeNestedSetToNoCmsBlocksBlockSlots < ActiveRecord::Migration
+class AddAwesomeNestedSetToNoCmsBlocksBlockSlots < active_record_migration_class
   def change
     add_reference :no_cms_blocks_block_slots, :parent, index: true
     add_column :no_cms_blocks_block_slots, :lft, :integer
