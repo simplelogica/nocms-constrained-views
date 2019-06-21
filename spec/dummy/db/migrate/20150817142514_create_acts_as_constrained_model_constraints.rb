@@ -1,6 +1,6 @@
 active_record_migration_class =
-  if Rails::VERSION::STRING[0..2].to_f >= 5
-    ActiveRecord::Migration[Rails::VERSION::STRING[0..2].to_f]
+  if Rails::VERSION::MAJOR >= 5
+    ActiveRecord::Migration[Rails::VERSION::MAJOR.to_f]
   else
     ActiveRecord::Migration
   end
