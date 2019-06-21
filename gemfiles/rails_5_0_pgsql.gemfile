@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "acts-as-constrained", :git => "git@github.com:simplelogica/acts-as-constrained.git", :branch => "features/rails-5"
-gem "nocms-blocks", :git => "git@github.com:simplelogica/nocms-blocks.git", :branch => "features/rails-5"
+gem "acts-as-constrained", :git => "git@github.com:simplelogica/acts-as-constrained.git", :branch => "feature/update_rails_version_5_2_3"
+gem "nocms-blocks", :git => "git@github.com:simplelogica/nocms-blocks.git", :branch => "features/rails-5-2-6"
 gem "pg"
 gem "rails", "5.0.0"
 gem "globalize", :git => "git@github.com:globalize/globalize.git", :branch => "master"
@@ -16,6 +16,7 @@ group :test do
   gem "factory_girl"
   gem "appraisal"
   gem "capybara"
+  gem "database_cleaner"
 end
 
 gemspec :path => "../"

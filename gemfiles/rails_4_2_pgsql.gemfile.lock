@@ -1,30 +1,30 @@
 GIT
   remote: git@github.com:simplelogica/acts-as-constrained.git
-  revision: cb4f235add65e8231feeee473c620e0ddc72cf97
-  branch: master
+  revision: 9150c42a42ea94d50b136027e992929e4baf110a
+  branch: feature/update_rails_version_5_2_3
   specs:
-    acts-as-constrained (0.0.1)
-      rails (~> 4.0, < 4.3)
+    acts-as-constrained (0.1.0)
+      rails (>= 4.0, < 5.3)
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: a685f1e7894579115f17b7555ecfa6b4a3390354
-  branch: edge
+  revision: 7ea5051a90b5b6dd708e779f3f52f4d805dfaec8
+  branch: features/rails-5-2-6
   specs:
-    nocms-blocks (1.1.2)
-      activeresource (~> 4.0, <= 4.1)
-      awesome_nested_set (~> 3.0.0)
-      globalize (>= 4.0.0, < 5.1)
-      rails (~> 4.0, <= 4.2.4)
+    nocms-blocks (1.2.0)
+      activeresource (>= 4.0.0, < 6.1)
+      awesome_nested_set (>= 3.0.0, < 3.2)
+      globalize (>= 4.0.0, < 5.4)
+      rails (>= 4.0.0, < 6.1)
 
 PATH
-  remote: ../
+  remote: ..
   specs:
-    nocms-constrained-views (0.0.1)
-      activeresource (>= 4.0.0, < 5.1)
-      acts-as-constrained (>= 0.0.1, < 0.1)
-      nocms-blocks (>= 1.1.0, < 1.1.5)
-      rails (> 4.0, < 5.1)
+    nocms-constrained-views (0.1.0)
+      activeresource (>= 4.0.0, < 5.3)
+      acts-as-constrained (>= 0.0.1, < 0.2)
+      nocms-blocks (>= 1.1.0, < 1.3)
+      rails (> 4.0, < 5.3)
 
 GEM
   remote: https://rubygems.org/
@@ -58,10 +58,10 @@ GEM
       activemodel (= 4.2.4)
       activesupport (= 4.2.4)
       arel (~> 6.0)
-    activeresource (4.0.0)
+    activeresource (4.1.0)
       activemodel (~> 4.0)
       activesupport (~> 4.0)
-      rails-observers (~> 0.1.1)
+      rails-observers (~> 0.1.2)
     activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -73,8 +73,8 @@ GEM
       rake
       thor (>= 0.14.0)
     arel (6.0.3)
-    awesome_nested_set (3.0.2)
-      activerecord (>= 4.0.0, < 5)
+    awesome_nested_set (3.1.4)
+      activerecord (>= 4.0.0, < 5.3)
     builder (3.2.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -83,6 +83,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     concurrent-ruby (1.0.0)
+    database_cleaner (1.7.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     factory_girl (4.5.0)
@@ -91,9 +92,10 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    globalize (5.0.1)
-      activemodel (>= 4.2.0, < 4.3)
-      activerecord (>= 4.2.0, < 4.3)
+    globalize (5.2.0)
+      activemodel (>= 4.2, < 5.3)
+      activerecord (>= 4.2, < 5.3)
+      request_store (~> 1.0)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
@@ -128,14 +130,16 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
-    rails-observers (0.1.2)
-      activemodel (~> 4.0)
+    rails-observers (0.1.5)
+      activemodel (>= 4.0)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    request_store (1.4.1)
+      rack (>= 1.4)
     rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -174,6 +178,7 @@ DEPENDENCIES
   acts-as-constrained!
   appraisal
   capybara
+  database_cleaner
   factory_girl
   faker
   nocms-blocks!
@@ -183,4 +188,4 @@ DEPENDENCIES
   rspec-rails
 
 BUNDLED WITH
-   1.10.6
+   1.17.0
