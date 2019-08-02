@@ -29,6 +29,10 @@ if Rails.version > "4.2"
   ActiveRecord::Migration.maintain_test_schema!
 end
 
+if Rails::VERSION::MAJOR >= 5
+  DatabaseCleaner.clean_with :truncation, except: %w(public.ar_internal_metadata)
+end
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

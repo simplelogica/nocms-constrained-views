@@ -1,5 +1,12 @@
+active_record_migration_class =
+  if Rails::VERSION::MAJOR >= 5
+    ActiveRecord::Migration[Rails::VERSION::MAJOR.to_f]
+  else
+    ActiveRecord::Migration
+  end
+
 # This migration comes from no_cms_blocks (originally 20150710112549)
-class MoveLayoutFromNoCmsBlocksBlockTranslationsToNoCmsBlocksBlocks < ActiveRecord::Migration
+class MoveLayoutFromNoCmsBlocksBlockTranslationsToNoCmsBlocksBlocks < active_record_migration_class
   def up
     add_column :no_cms_blocks_blocks, :layout, :string
 

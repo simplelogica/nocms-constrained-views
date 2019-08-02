@@ -19,7 +19,8 @@ group :test do
   gem 'factory_girl'
   gem 'appraisal'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
-gem 'acts-as-constrained', git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'master'
-gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'
+gem 'acts-as-constrained', git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/update_rails_version_5_2_3'
+gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5-2-6'
