@@ -23,8 +23,8 @@ end
 appraise "rails-5-0-mysql" do
   gem "mysql2", "~> 0.3.0"
   gem "rails", "5.0.0"
-  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/update_rails_version_5_2_3'
-  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5-2-6'
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'
   gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
   gem "activesupport", "~> 5.0.0"
   gem 'activeresource', github: 'rails/activeresource'
@@ -48,8 +48,8 @@ end
 appraise "rails-5-0-pgsql" do
   gem "pg"
   gem "rails", "5.0.0"
-  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/update_rails_version_5_2_3'
-  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5-2-6'
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'
   gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
   gem "activesupport", "~> 5.0.0"
   gem 'activeresource', github: 'rails/activeresource'
@@ -59,8 +59,8 @@ appraise "rails-5-2-3-pgsql" do
   gem "pg"
   gem "rails", "5.2.3"
 
-  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/update_rails_version_5_2_3'
-  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5-2-6'
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'
 
   if ruby_version < ruby_2_4_6
     gem 'globalize', '~> 5.2.0'

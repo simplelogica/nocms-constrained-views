@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: 7ea5051a90b5b6dd708e779f3f52f4d805dfaec8
-  branch: features/rails-5-2-6
+  revision: e58787b3041c97f1100e7cee7141acce8ffc9e42
+  branch: edge
   specs:
     nocms-blocks (1.2.0)
       activeresource (>= 4.0.0, < 6.1)

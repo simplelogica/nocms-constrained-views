@@ -23,4 +23,4 @@ group :test do
 end
 
 gem 'acts-as-constrained', git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/update_rails_version_5_2_3'
-gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'features/rails-5-2-6'
+gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'

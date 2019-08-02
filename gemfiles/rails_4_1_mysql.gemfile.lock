@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:simplelogica/acts-as-constrained.git
-  revision: 9150c42a42ea94d50b136027e992929e4baf110a
+  revision: 47f3beb0d7572c61ca55d293e010c7e47d520e26
   branch: feature/update_rails_version_5_2_3
   specs:
     acts-as-constrained (0.1.0)
@@ -8,8 +8,8 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: 7ea5051a90b5b6dd708e779f3f52f4d805dfaec8
-  branch: features/rails-5-2-6
+  revision: e58787b3041c97f1100e7cee7141acce8ffc9e42
+  branch: edge
   specs:
     nocms-blocks (1.2.0)
       activeresource (>= 4.0.0, < 6.1)
