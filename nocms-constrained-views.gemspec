@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "Rakefile"]
 
-  s.add_dependency "rails", " > 4.0", "< 5.3"
+  s.add_dependency "rails", " > 4.0", "< 6.1"
   s.add_dependency "acts-as-constrained", ">= 0.0.1", "< 0.2"
   s.add_dependency "nocms-blocks", ">= 1.1.0", "< 1.3"
   s.add_dependency "activeresource", ">= 4.0.0", '< 5.3'
