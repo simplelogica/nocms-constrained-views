@@ -75,3 +75,21 @@ appraise "rails-5-2-3-pgsql" do
     gem 'rspec-rails', '~> 3.7'
   end
 end
+
+
+appraise "rails-6-0-0-pgsql" do
+  gem "pg"
+  gem "rails", "6.0.0"
+
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails-edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails'
+
+  gem 'globalize', '~> 6.0.0'
+
+  gem "activesupport", "~> 6.0.0"
+  gem 'activeresource', github: 'rails/activeresource'
+
+  group :test do
+    gem 'rspec-rails', '~> 5.0.2'
+  end
+end
