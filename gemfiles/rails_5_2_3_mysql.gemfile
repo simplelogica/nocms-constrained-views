@@ -13,7 +13,7 @@ gem "activeresource", github: "rails/activeresource"
 group :test do
   gem "faker"
   gem "rspec-rails", "~> 3.7"
-  gem "factory_girl"
+  gem "factory_bot"
   gem "appraisal"
   gem "capybara"
   gem "database_cleaner"

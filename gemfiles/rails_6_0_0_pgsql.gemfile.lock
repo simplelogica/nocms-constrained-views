@@ -125,8 +125,8 @@ GEM
     database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     erubi (1.10.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
     faker (2.19.0)
       i18n (>= 1.6, < 2)
     globalid (1.0.0)
@@ -237,7 +237,7 @@ DEPENDENCIES
   appraisal
   capybara
   database_cleaner
-  factory_girl
+  factory_bot
   faker
   globalize (~> 6.0.0)
   nocms-blocks!
