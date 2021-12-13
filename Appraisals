@@ -37,6 +37,45 @@ appraise "rails-5-0-mysql" do
   gem 'activeresource', github: 'rails/activeresource'
 end
 
+appraise "rails-5-2-3-mysql" do
+  gem "mysql2"
+  gem "rails", "5.2.3"
+
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'edge'
+
+  if ruby_version < ruby_2_4_6
+    gem 'globalize', '~> 5.2.0'
+  else
+    gem "globalize"
+  end
+
+  gem "activesupport", "~> 5.2.3"
+  gem 'activeresource', github: 'rails/activeresource'
+
+  group :test do
+    gem 'rspec-rails', '~> 3.7'
+  end
+end
+
+appraise "rails-6-0-0-mysql" do
+  gem "mysql2"
+  gem "rails", "6.0.0"
+
+  gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails-edge'
+  gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails'
+
+  gem 'globalize', '~> 6.0.0'
+
+  gem "activesupport", "~> 6.0.0"
+  gem 'activeresource', github: 'rails/activeresource'
+
+  group :test do
+    gem 'rspec-rails', '~> 5.0.2'
+  end
+end
+
+
 if ruby_version < ruby_2_5_0
 
   appraise "rails-4-0-pgsql" do
@@ -86,7 +125,6 @@ appraise "rails-5-2-3-pgsql" do
     gem 'rspec-rails', '~> 3.7'
   end
 end
-
 
 appraise "rails-6-0-0-pgsql" do
   gem "pg"
