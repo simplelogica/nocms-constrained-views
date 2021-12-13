@@ -60,7 +60,7 @@ end
 
 appraise "rails-6-0-0-mysql" do
   gem "mysql2"
-  gem "rails", "6.0.0"
+  gem "rails", "6.0.4.1"
 
   gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails-edge'
   gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails'
@@ -128,7 +128,7 @@ end
 
 appraise "rails-6-0-0-pgsql" do
   gem "pg"
-  gem "rails", "6.0.0"
+  gem "rails", "6.0.4.1"
 
   gem "acts-as-constrained", git: 'git@github.com:simplelogica/acts-as-constrained.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails-edge'
   gem "nocms-blocks", git: 'git@github.com:simplelogica/nocms-blocks.git', branch: 'feature/PY03782-32-azu-migration-ruby-and-rails'
