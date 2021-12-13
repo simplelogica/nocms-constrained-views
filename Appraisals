@@ -5,19 +5,26 @@ ruby_version = Gem::Version.new(RUBY_VERSION)
 # another version in prior versions
 ruby_2_4_6 = Gem::Version.new('2.4.6')
 
-appraise "rails-4-0-mysql" do
-  gem "mysql2", "~> 0.3.0"
-  gem "rails", "4.0.13"
-end
 
-appraise "rails-4-1-mysql" do
-  gem "mysql2", "~> 0.3.0"
-  gem "rails", "4.1.13"
-end
+ruby_2_5_0 = Gem::Version.new('2.5.0')
 
-appraise "rails-4-2-mysql" do
-  gem "mysql2", "~> 0.3.0"
-  gem "rails", "4.2.4"
+if ruby_version < ruby_2_5_0
+
+  appraise "rails-4-0-mysql" do
+    gem "mysql2", "~> 0.3.0"
+    gem "rails", "4.0.13"
+  end
+
+  appraise "rails-4-1-mysql" do
+    gem "mysql2", "~> 0.3.0"
+    gem "rails", "4.1.13"
+  end
+
+  appraise "rails-4-2-mysql" do
+    gem "mysql2", "~> 0.3.0"
+    gem "rails", "4.2.4"
+  end
+
 end
 
 appraise "rails-5-0-mysql" do
@@ -30,19 +37,23 @@ appraise "rails-5-0-mysql" do
   gem 'activeresource', github: 'rails/activeresource'
 end
 
-appraise "rails-4-0-pgsql" do
-  gem "pg"
-  gem "rails", "4.0.13"
-end
+if ruby_version < ruby_2_5_0
 
-appraise "rails-4-1-pgsql" do
-  gem "pg"
-  gem "rails", "4.1.13"
-end
+  appraise "rails-4-0-pgsql" do
+    gem "pg"
+    gem "rails", "4.0.13"
+  end
 
-appraise "rails-4-2-pgsql" do
-  gem "pg"
-  gem "rails", "4.2.4"
+  appraise "rails-4-1-pgsql" do
+    gem "pg"
+    gem "rails", "4.1.13"
+  end
+
+  appraise "rails-4-2-pgsql" do
+    gem "pg"
+    gem "rails", "4.2.4"
+  end
+
 end
 
 appraise "rails-5-0-pgsql" do
@@ -65,7 +76,7 @@ appraise "rails-5-2-3-pgsql" do
   if ruby_version < ruby_2_4_6
     gem 'globalize', '~> 5.2.0'
   else
-    gem "globalize", git: 'git@github.com:globalize/globalize.git', branch: 'master'
+    gem "globalize"
   end
 
   gem "activesupport", "~> 5.2.3"

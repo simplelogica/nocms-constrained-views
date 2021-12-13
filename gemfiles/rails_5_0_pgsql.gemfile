@@ -2,13 +2,13 @@
 
 source "https://rubygems.org"
 
-gem "acts-as-constrained", :git => "git@github.com:simplelogica/acts-as-constrained.git", :branch => "edge"
-gem "nocms-blocks", :git => "git@github.com:simplelogica/nocms-blocks.git", :branch => "edge"
+gem "acts-as-constrained", git: "git@github.com:simplelogica/acts-as-constrained.git", branch: "edge"
+gem "nocms-blocks", git: "git@github.com:simplelogica/nocms-blocks.git", branch: "edge"
 gem "pg"
 gem "rails", "5.0.0"
-gem "globalize", :git => "git@github.com:globalize/globalize.git", :branch => "master"
+gem "globalize", git: "git@github.com:globalize/globalize.git", branch: "master"
 gem "activesupport", "~> 5.0.0"
-gem "activeresource", :github => "rails/activeresource"
+gem "activeresource", github: "rails/activeresource"
 
 group :test do
   gem "faker"
@@ -19,4 +19,4 @@ group :test do
   gem "database_cleaner"
 end
 
-gemspec :path => "../"
+gemspec path: "../"
