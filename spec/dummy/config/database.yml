@@ -5,20 +5,12 @@
 #   gem 'sqlite3'
 #
 
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 5
-  username: root
-  password:
-  host: localhost
-  database: nocms_constrained_views_dev
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test_mysql2: &test_mysql2
+db_mysql2: &db_mysql2
   adapter: mysql2
   encoding: utf8
   reconnect: false
@@ -27,7 +19,7 @@ test_mysql2: &test_mysql2
   password:
   host: localhost
 
-test_pg: &test_pg
+db_pg: &db_pg
   adapter: postgresql
   pool: 5
   timeout: 5000
@@ -36,6 +28,10 @@ test_pg: &test_pg
   host: localhost
   encoding: utf8
 
+development:
+  database: nocms_constrained_views_dev
+  <<: *db_<%= NoCms::ConstrainedViews.installed_db_gem %>
+
 test:
   database: nocms_constrained_views_test
-  <<: *test_<%= NoCms::ConstrainedViews.installed_db_gem %>
+  <<: *db_<%= NoCms::ConstrainedViews.installed_db_gem %>
