@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git@github.com:simplelogica/nocms-blocks.git
-  revision: 5960a61f3d3505d7f0762d12058846fabf0b73c0
+  revision: 125421f91ad9afecaf973cb69ae17aa219fd4884
   branch: feature/PY03782-32-azu-migration-ruby-and-rails
   specs:
     nocms-blocks (1.3.0)
