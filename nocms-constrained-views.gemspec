@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", " > 4.0", "< 7.0"
   s.add_dependency "acts-as-constrained",">= 0.0.1", "< 0.3"
   s.add_dependency "nocms-blocks", ">= 1.1.0", "< 1.4"
-  s.add_dependency "activeresource", ">= 4.0.0", '< 5.3'
+  s.add_dependency "activeresource", ">= 4.0.0", '< 6.1'
 end
